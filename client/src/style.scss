@@ -1,0 +1,76 @@
+$lightGreen: #b9e7e7;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app {
+    .container {
+        width: 1024px;
+        margin: auto;
+
+        //Login & Register
+        .auth {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(130deg, #509fc9, #e83b59);
+            opacity: 0.7;
+            background-size: 100vw 100vh;
+            background-image: url("https://images.pexels.com/photos/89749/pexels-photo-89749.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+            background-repeat: no-repeat;
+
+            .auth .center {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            h1 {
+                font-size: 20px;
+                margin-bottom: 20px;
+                font-size: 30px;
+                font-style: italic;
+                -webkit-text-stroke: 1px black;
+                color: hsl(196, 100%, 60%);
+                text-align: center;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                padding: 10px;
+                background-color: white;
+                width: 250px;
+                gap: 20px;
+
+                input {
+                    padding: 10px;
+                    border: none;
+                    border-bottom: 1px solid gray;
+                }
+                button {
+                    padding: 10px;
+                    border: none;
+                    background-color: #33caff;
+                    cursor: pointer;
+                    color: white;
+                }
+
+                p {
+                    font-size: 12px;
+                    color: red;
+                }
+
+                span {
+                    font-size: 12px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
