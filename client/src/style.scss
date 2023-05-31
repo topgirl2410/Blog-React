@@ -6,9 +6,17 @@ $lightGreen: #b9e7e7;
 }
 
 .app {
+    display: flex;
+    justify-content: center;
+
     .container {
         width: 1024px;
         margin: auto;
+
+        .link {
+            text-decoration: none;
+            color: inherit;
+        }
 
         //Login & Register
         .auth {
@@ -21,9 +29,8 @@ $lightGreen: #b9e7e7;
             background: linear-gradient(130deg, #509fc9, #e83b59);
             opacity: 0.7;
             background-size: 100vw 100vh;
-            background-image: url("https://images.pexels.com/photos/89749/pexels-photo-89749.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+            background-image: url("https://images.pexels.com/photos/1470405/pexels-photo-1470405.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
             background-repeat: no-repeat;
-
 
             h1 {
                 font-size: 20px;
@@ -64,6 +71,55 @@ $lightGreen: #b9e7e7;
                 span {
                     font-size: 12px;
                     text-align: center;
+                }
+            }
+        }
+
+        // Navbar
+        .navbar {
+            .container {
+                padding: 10px 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .logo {
+                    img {
+                        width: 140px;
+                    }
+                }
+                .links {
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    
+                    h6{
+                        font-size: 16px;
+                        font-weight: 300;
+                    }
+
+                    span {
+                        cursor: pointer;
+                    }
+
+                    .write {
+                        background-color: #6ac5f7;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: 300;
+                        border: 1px solid white;
+
+                        &:hover {
+                            width: 48px;
+                            height: 48px;
+                            background-color: white;
+                            color: #3471ce;
+                            border: 1px solid #3471ce;
+                        }
+                    }
                 }
             }
         }

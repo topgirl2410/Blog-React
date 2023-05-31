@@ -1,8 +1,11 @@
 import React from 'react'
+import Logo from '../img/logo/Lovepik_com-401747731-education-logo.png'
 
 const Footer = () => {
     return (
-        <div>Footer</div>
+        <footer>
+            <img src={Logo} alt="" />
+        </footer>
     )
 }
 
