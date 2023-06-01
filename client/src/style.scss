@@ -201,7 +201,7 @@ $pink: #ff33e9;
                             color: #ff33e9;
                             margin-top: 10px;
 
-                            &:hover{
+                            &:hover {
                                 border: 1px solid white;
                                 background-color: #ff33e9;
                                 color: black;
@@ -209,6 +209,20 @@ $pink: #ff33e9;
                         }
                     }
                 }
+            }
+        }
+
+        // Single
+        .single {
+            display: flex;
+            gap: 50px;
+
+            .content {
+                flex: 5;
+            }
+
+            .menu {
+            flex: 2;
             }
         }
     }
