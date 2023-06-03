@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 const Login = () => {
 
@@ -26,7 +27,11 @@ const Login = () => {
             await axios.post("http://localhost:4000/api/auth/login", inputs)
             navigate("/")
         } catch (err) {
-            setErr(err.response.data)
+            if (typeof err === 'object' && err !== null) {
+                console.log(err.toString());
+            } else {
+                console.log('Unexpected error', err);
+            }
         }
     }
 
@@ -34,8 +39,8 @@ const Login = () => {
         <div className='auth'>
             <h1>Login</h1>
             <form>
-                <input required type='text' placeholder='username' />
-                <input required type='password' placeholder='password' />
+                <input required type='text' placeholder='username' name='username' onChange={handleChange} />
+                <input required type='password' placeholder='password' name='password' onChange={handleChange} />
                 <button onClick={handleSubmit}>Login</button>
                 {err && <p>{err}</p>}
                 <span>Don't you have an account?? <Link to='/register'>Register</Link> </span>
