@@ -13,6 +13,9 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import "./style.scss"
 
+
+
+
 const Layout = () => {
   return (
     <>
@@ -53,6 +56,7 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+ 
   return (
     <div className="app">
       <div className="container">
@@ -60,6 +64,8 @@ function App() {
       </div>
     </div>
   );
+
+  
 }
 
 export default App;
